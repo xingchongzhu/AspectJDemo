@@ -18,7 +18,7 @@ public class ViewAspect {
     public void onClickPointcut() {
     }
 
-    @Pointcut("execution(* *.*onTouch(..))")
+    @Pointcut("execution(* android.view.View.(..))")
     public void onTouchPointcut() {
         Log.d(TAG,"onTouchPointcut");
     }

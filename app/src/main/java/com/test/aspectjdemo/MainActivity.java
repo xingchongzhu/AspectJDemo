@@ -13,7 +13,7 @@ import com.trackpoint.annotation.AspectDebugLog;
 
 import net.codepig.aspectjdemo.R;
 
-public class MainActivity extends Activity implements View.OnTouchListener {
+public class MainActivity extends Activity {
     private Button myButton;
     private final String TAG= this.getClass().getSimpleName();
 
@@ -30,7 +30,6 @@ public class MainActivity extends Activity implements View.OnTouchListener {
                 onNameClick();
             }
         });
-        findViewById(R.id.line1).setOnTouchListener(this);
     }
 
     @AspectDebugLog
@@ -47,12 +46,6 @@ public class MainActivity extends Activity implements View.OnTouchListener {
     @Override
     protected void onDestroy() {
         super.onDestroy();
-    }
-
-    @Override
-    public boolean onTouch(View v, MotionEvent event) {
-        Log.d(TAG,"onTouch event "+event.getAction());
-        return false;
     }
 
     @Override

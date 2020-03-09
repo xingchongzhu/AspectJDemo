@@ -5,6 +5,7 @@ import android.util.Log;
 import android.view.MotionEvent;
 import android.view.View;
 
+import com.trackpoint.AnnotationAspectTrace;
 import com.trackpoint.AspectTrace;
 import com.trackpoint.TrackPoint;
 import com.trackpoint.TrackPointCallBack;
@@ -19,7 +20,7 @@ public class MainApp extends Application {
     @Override
     public void onCreate() {
         super.onCreate();
-        AspectTrace.setAspectTraceListener(new AspectTrace.AspectTraceListener() {
+        AnnotationAspectTrace.setAspectTraceListener(new AnnotationAspectTrace.AspectTraceListener() {
             @Override
             public void logger(String tag, String message) {
                 Log.e(tag, message);
